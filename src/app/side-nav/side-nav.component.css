@@ -1,0 +1,74 @@
+nav{
+    height: 1024px;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top:0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.heading{
+    width: 240px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #EBEEFC;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: scroll;
+    max-height: 880px;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-item{
+    width: 220px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #EBEEFC;
+    font-family: 'Nunito';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.menu-adder{
+    font-family: 'Nunito';
+    width: 240px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 1px #EBEEFC;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3659E2;
+}
+
+nav{
+    border-right: solid 1px #EBEEFC;;
+}

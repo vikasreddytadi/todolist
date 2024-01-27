@@ -1,0 +1,15 @@
+.main{
+    position: relative;
+}
+
+.menu{
+    position: fixed;
+}
+
+.content{
+    position: absolute;
+    margin-left: 240px;
+}
+
+
+

@@ -1,0 +1,88 @@
+<div class="myprojects">
+    <div class="heading">
+        My Projects
+    </div>
+    <div class="holder">
+        <div class="todo flex-item">
+            <li>To Do</li>
+
+            <div *ngFor="let key of temporaryObject[0]['To Do']">
+                <div class="tracker">
+                    <div class="taskname">
+                        {{key.taskName}}
+                    </div>
+                    <div class="dates">
+                        <div class="sdate">
+                            <p>Start Date</p>
+                            <p>{{key.startDate}}</p>
+                        </div>
+                        <div class="edate">
+                            <p>Deadline</p>
+                            <p>{{key.deadline}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additem" (click)="displayChanger()">
+                + Add new
+            </div>
+        </div>
+        <div class="inprogress flex-item">
+            <li>In Progress</li>
+            <div class="additem">
+                + Add new
+            </div>
+        </div>
+        <div class="inreview flex-item">
+            <li>In Review</li>
+            <div class="additem">
+                + Add new
+            </div>
+        </div>
+        <div class="completed flex-item">
+            <li>Completed</li>
+            <div class="additem">
+                + Add new
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="newItemInput" *ngIf="display">
+        <div class="tittle">
+            <p>Add new task</p>
+            <p (click)="displayChanger()">X</p>
+        </div>
+        <div class="inputdata">
+            <div class="nameOfTask">
+                <p>Name of the Task</p>
+                <input type="text" [(ngModel)]="taskName" placeholder="Text">
+            </div>
+            <div class="date">
+                <div class="startDate">
+                    <p>Start Date</p>
+                    <input type="date" [(ngModel)]="startdate" placeholder="Text">
+                </div>
+                <div class="endDate">
+                    <p>Deadline</p>
+                    <input type="date" [(ngModel)]="deadline" placeholder="Text">
+                </div>
+            </div>
+            <div class="status">
+                <p>Status</p>
+                <select class="dropdown" [(ngModel)]="status">
+                    <option value="" class="inprogressdropdown">In Progress</option>
+                    <option value="2" class="inreviewdropdown">In Review</option>
+                    <option value="3" class="completeddropdown">Completed</option>
+                </select>
+            </div>
+        </div>
+        <div class="close">
+            <button type="button" class="child1" (click)="displayChanger()">Cancel</button>
+            <button type="button" class="child2" (click)="submit()">Add</button>
+        </div>
+    </div>
+    
+</div>
